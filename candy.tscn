@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://0twpu70fpprg"]
+
+[ext_resource type="Script" path="res://candy.gd" id="1_amfyd"]
+[ext_resource type="Texture2D" uid="uid://tqjx0e8ld37c" path="res://final2566/final2566/gui/bonus2.png" id="1_w6v58"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvjpp"]
+size = Vector2(38, 73)
+
+[sub_resource type="GDScript" id="GDScript_c0e8f"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Candy" type="Node2D"]
+script = ExtResource("1_amfyd")
+
+[node name="candy" type="Sprite2D" parent="."]
+texture = ExtResource("1_w6v58")
+
+[node name="candy2" type="Area2D" parent="."]
+position = Vector2(2.5, -0.5)
+
+[node name="candy_colli" type="CollisionShape2D" parent="candy2" groups=["candy"]]
+position = Vector2(-6.5, 6)
+shape = SubResource("RectangleShape2D_uvjpp")
+script = SubResource("GDScript_c0e8f")
+
+[connection signal="body_entered" from="candy2" to="." method="_on_area_2d_body_entered"]

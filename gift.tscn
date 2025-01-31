@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://blpmcxxyee27g"]
+
+[ext_resource type="Script" path="res://gift.gd" id="1_4dw3s"]
+[ext_resource type="Texture2D" uid="uid://hqo73axmhr8c" path="res://final2566/final2566/objects/life.png" id="1_k1xg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xyk4"]
+size = Vector2(43.5, 59)
+
+[node name="giftbox" type="Node2D"]
+script = ExtResource("1_4dw3s")
+
+[node name="giftbox" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_k1xg5")
+
+[node name="giftbox2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="giftbox2" groups=["giftbox"]]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_8xyk4")

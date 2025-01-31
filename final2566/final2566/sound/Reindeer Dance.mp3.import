@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dg715mucx1wiy"
+path="res://.godot/imported/Reindeer Dance.mp3-75b522d4cf3ef541d07471b414c3448a.mp3str"
+
+[deps]
+
+source_file="res://final2566/final2566/sound/Reindeer Dance.mp3"
+dest_files=["res://.godot/imported/Reindeer Dance.mp3-75b522d4cf3ef541d07471b414c3448a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
